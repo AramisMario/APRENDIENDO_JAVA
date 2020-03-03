@@ -8,14 +8,22 @@ public class Singelton {
 		
 	}
 	
-	public static Singelton getSingelton() {
-		
+	public static synchronized Singelton getSingelton() {
 		if(singelton == null) {
 			singelton = new Singelton();
 		}
-		
+	
 		return singelton;
 	}
+	
+//	public static synchronized Singelton getSingelton() {
+//		 // synchronized para aplicaciones multihilo
+//		if(singelton == null) {
+//			singelton = new Singelton();
+//		}
+//		
+//		return singelton;
+//	}
 	
 	public String getInfo() {
 		return this.info;
